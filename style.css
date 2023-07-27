@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#wrapper {
+    top: 0px;
+    left: 0px;
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #121a1c;
+
+    #app-bar {
+        position: relative;
+        top: 80px;
+        margin: 0px 80px;
+        padding: 20px 40px;
+        background-color: wheat;
+        
+        #app-bar-items {
+            display: flex;
+            list-style: none;
+            
+            .item a {
+                text-decoration: none;
+                color: black;
+            };
+
+            .item::after {
+                margin: 0px 10px;
+                content: " | ";
+            };
+
+            .last-item::after {
+                display: none;
+            };
+            
+            #services-item {
+                position: relative;
+            };
+
+            #services-item:hover > #cnt-services,
+            #cnt-services:hover {
+                opacity: 100%;
+                visibility: unset;
+            };
+
+            #cnt-services {
+                opacity: 0%;
+                visibility: hidden;
+                position: absolute;
+                top: 200%;
+                left: -25%;
+                width: max-content;
+                display: flex;
+                padding: 5px 5px;
+                flex-direction: column;
+                gap: 15px;
+                background-color: beige;
+                list-style: none;
+                transition: 500ms;
+
+                .service {
+                    padding: 10px 15px;
+                };
+
+                .service:hover {
+                    background-color: bisque;
+                }
+            };
+        };
+    };
+}
+
